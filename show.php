@@ -17,6 +17,7 @@
 <h2>詳細ページ</h2>
 <?php
     require('dbconnect.php');
+    
 ?>
 <a href="index.php">戻る</a>
 </main>

@@ -1,0 +1,54 @@
+body {
+	height: 100%;
+    margin: 0;
+}
+
+body
+header{
+    height: 65px;
+    background-color: black;
+}
+header h1 {
+    margin-top: 0;
+    font-family: cursive;
+    color: 	#EEEEEE;
+    padding-left:30px;
+  }
+  main {
+    min-height: 100vh;
+    background-color: silver;
+  }
+  .main_body{
+
+      padding-left:60px;
+      padding-top: 20px;
+  }
+  .index-head {
+    display: inline-flex;
+  }
+
+  .new_link{
+    position: relative;
+    left: 100px;
+    top: 25px;
+    color: black;
+  }
+  .new_title{
+    margin-top: 0;
+  }
+
+  .show_username{
+    margin-top: 0;
+  }
+  .edit_title{
+    margin-top: 0;
+  }
+  .update_comment{
+    margin-top: 0;
+  }
+  .destroy_comment{
+    margin-top: 0;
+  }
+  .show_body{
+    width: 700px;
+  }

@@ -34,9 +34,28 @@
             <a href="edit.php?id=<?php print($bbs['id']); ?>">編集</a>
             |
             <a href="destroy.php?id=<?php print($bbs['id']); ?>">削除</a>
-            |
-            <a href="index.php">戻る</a>
         </article>
+        <?php
+            $comments = $db->prepare('SELECT * FROM comments WHERE bbs_id=?');
+            $comments->execute(array($id));
+        ?>
+        <table>
+            <?php while ($comment = $comments->fetch()): ?>
+            <tr>
+                <td><?php print($comment['comment']); ?></td>
+                <td><time><?php print($comment['created_at']); ?></time></td>
+                <td><a href="comment_des.php?id=<?php print($comment['id']);?>">削除</a></td>
+            </tr>          
+            <?php endwhile; ?>
+        </table>
+        <form action="comment_cre.php" method="post">
+            <input type="hidden" name="bbs_id" value="<?php print($id); ?>">
+            <textarea name="comment" cols="50" rows="5" placeholder="コメント"></textarea>
+            <br>
+            <button type="submit">コメントする</button>
+        </form>
+
+        <a href="index.php">戻る</a>
     </div>
 </main>
 </body>    

@@ -10,5 +10,4 @@
             }catch(PDOException $e){
                 echo "エラー:".$e->getMessage();
             }
-        $db = new PDO($dsn,$user,$password);
 ?>

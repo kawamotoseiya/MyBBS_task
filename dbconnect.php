@@ -9,9 +9,6 @@ try {
     $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $sql = 'SELECT * FROM user';
-    $prepare = $db->prepare($sql);
-    $prepare->execute();
 
     echo '<pre>';
     $prepare->execute();

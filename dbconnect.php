@@ -13,6 +13,7 @@
           );
     try{
         $dbh = new PDO($dsn,$user,$password,$options);
+        return $dbh;
         }catch(PDOException $e){
             echo "エラー:".$e->getMessage();
         }

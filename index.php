@@ -23,6 +23,7 @@
 <table>
 <?php
 require('dbconnect.php');
+date_default_timezone_set('Asia/Tokyo');
 if (isset($_REQUEST['page']) && is_numeric($_REQUEST['page'])){
     $page = $_REQUEST['page'];
 } else {

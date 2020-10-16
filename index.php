@@ -41,7 +41,7 @@ if (isset($_REQUEST['page']) && is_numeric($_REQUEST['page'])){
             <tr>
                 <td>[<?php print($bbs['username']); ?>]</td>
                 <td>/</td>
-                <td><time>[<?php print($bbs['created_at']); ?>]</time></td>
+                <td><time>[<?php print($bbs['created_at']); ?>+09:00]</time></td>
             </tr>
             <tr>
                 <td colspan="12"><a href="show.php?id=<?php print($bbs['id']);?>">[<?php print(mb_substr($bbs['body'],0,50)); ?>]</a><hr></td>

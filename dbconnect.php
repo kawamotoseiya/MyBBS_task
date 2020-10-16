@@ -1,5 +1,5 @@
 <?php   
-        
+        date_default_timezone_set('Asia/Tokyo');
         $now_date = date('Y-m-d H:i:s', strtotime('+9hour'));
         $db1 = parse_url($_SERVER['CLEARDB_DATABASE_URL']);
         $db1['dbname'] = ltrim($db1['path'], '/');

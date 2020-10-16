@@ -1,6 +1,11 @@
 <?php   
-        if ( function_exists( 'date_default_timezone_set' ) )
-        date_default_timezone_set( 'Asia/Tokyo' );
+        var_dump(date_default_timezone_get());
+        var_dump(date('Y-m-d H:i:s'));
+        
+        date_default_timezone_set('Asia/Tokyo');
+        
+        var_dump(date_default_timezone_get());
+        var_dump(date('Y-m-d H:i:s')); 
         $db1 = parse_url($_SERVER['CLEARDB_DATABASE_URL']);
         $db1['dbname'] = ltrim($db1['path'], '/');
         $dsn = "mysql:host={$db1['host']};dbname={$db1['dbname']};charset=utf8";

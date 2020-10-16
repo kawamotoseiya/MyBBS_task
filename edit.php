@@ -18,7 +18,6 @@
 <h2 class="edit_title">編集</h2>
 <?php
 require('dbconnect.php');
-date_default_timezone_set('Asia/Tokyo');
 if(isset($_REQUEST['id']) && is_numeric($_REQUEST['id'])){
     $id=$_REQUEST['id'];
     $bbses = $db->prepare('SELECT * FROM bbs WHERE id=?');

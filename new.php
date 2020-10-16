@@ -16,7 +16,6 @@
 <main>
 <?php
 require('dbconnect.php');
-date_default_timezone_set('Asia/Tokyo');
 ?>
     <div class="main_body">
         <h2 class="new_title">新規投稿</h2>

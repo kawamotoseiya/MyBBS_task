@@ -1,5 +1,6 @@
 <?php   
-        date_default_timezone_set('Asia/Tokyo');
+        if ( function_exists( 'date_default_timezone_set' ) )
+        date_default_timezone_set( 'Asia/Tokyo' );
         $db1 = parse_url($_SERVER['CLEARDB_DATABASE_URL']);
         $db1['dbname'] = ltrim($db1['path'], '/');
         $dsn = "mysql:host={$db1['host']};dbname={$db1['dbname']};charset=utf8";

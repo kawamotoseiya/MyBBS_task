@@ -49,6 +49,5 @@ header h1 {
     margin-top: 0;
   }
   .show_body{
-    width: 70%;
-    word-break: break-all
+    overflow: visible;
   }

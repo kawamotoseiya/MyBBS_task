@@ -50,7 +50,7 @@
         </table>
         <form action="comment_cre.php" method="post">
             <input type="hidden" name="bbs_id" value="<?php print($id); ?>">
-            <textarea name="comment" cols="50" rows="5" placeholder="コメント"></textarea>
+            <textarea name="comment" cols="40" rows="5" placeholder="コメント"></textarea>
             <br>
             <button type="submit">コメントする</button>
         </form>

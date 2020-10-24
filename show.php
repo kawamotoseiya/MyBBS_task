@@ -30,7 +30,7 @@
         <article>
             <h3 class="show_username">投稿者：<?php print($bbs['username']); ?></h3>
             <h3>作成日：<?php print($bbs['created_at']); ?></h3>
-            <h3 class="show_body"><?php print($bbs['body']); ?></h3>
+            <div class="show_body"><h3><?php print($bbs['body']); ?></h3></div>
             <a href="edit.php?id=<?php print($bbs['id']); ?>">編集</a>
             |
             <a href="destroy.php?id=<?php print($bbs['id']); ?>">削除</a>

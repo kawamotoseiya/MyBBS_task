@@ -50,4 +50,5 @@ header h1 {
   }
   .show_body{
     width: 600px;
+    margin:0 auto;
   }

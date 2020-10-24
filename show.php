@@ -27,14 +27,18 @@
             $bbs = $bbses->fetch();
 
         ?>
-        <article>
-            <h3 class="show_username">投稿者：<?php print($bbs['username']); ?></h3>
-            <h3>作成日：<?php print($bbs['created_at']); ?></h3>
-            <div class="show_body"><h3><?php print($bbs['body']); ?></h3></div>
-            <a href="edit.php?id=<?php print($bbs['id']); ?>">編集</a>
-            |
-            <a href="destroy.php?id=<?php print($bbs['id']); ?>">削除</a>
-        </article>
+        <table>
+            <tr>
+                <td><h3 class="show_username">投稿者：<?php print($bbs['username']); ?></h3></td>
+                <td><h3>作成日：<?php print($bbs['created_at']); ?></h3></td>
+                <td class="show_body"><h3><?php print($bbs['body']); ?></h3></td>
+                <td>
+                    <a href="edit.php?id=<?php print($bbs['id']); ?>">編集</a>
+                    |
+                    <a href="destroy.php?id=<?php print($bbs['id']); ?>">削除</a>
+                </td>
+            </tr>
+        </table>
         <?php
             $comments = $db->prepare('SELECT * FROM comments WHERE bbs_id=?');
             $comments->execute(array($id));

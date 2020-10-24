@@ -29,9 +29,9 @@
             if (empty($error)){
             $statement = $db->prepare('UPDATE bbs SET username=?, body=?, created_at=NOW()+INTERVAL 9 HOUR, WHERE id=?');
             $statement->execute(array($_POST['username'], $_POST['body'], $_POST['id']));
+            echo '更新しました。';
             }
         ?>
-        <p class="update_comment">変更しました。</p>
         <a href="index.php">戻る</a>
     </div>
 </main>

@@ -19,7 +19,7 @@
         require('dbconnect.php');
         $bbs_id=$_POST['bbs_id'];
 
-        $statement = $db->prepare('INSERT INTO comments SET bbs_id=?, comment=?, created_at=NOW()');
+        $statement = $db->prepare('INSERT INTO comments SET bbs_id=?, comment=?, created_at=NOW()+INTERVAL 9 HOUR');
         $statement->execute(array($_POST['bbs_id'], $_POST['comment']));
         echo 'コメントしました';
         ?>

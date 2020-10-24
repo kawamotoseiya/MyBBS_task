@@ -27,7 +27,7 @@
             $bbs = $bbses->fetch();
 
         ?>
-        <div style="width: 100%;word-break:break-all;">
+        <div style="width: 85%;word-break:break-all;">
             <h3 class="show_username">投稿者：<?php print($bbs['username']); ?></h3>
             <h3>作成日：<?php print($bbs['created_at']); ?></h3>
             <h3><?php print($bbs['body']); ?></h3>

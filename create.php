@@ -17,9 +17,19 @@
     <div class="main_body">
         <?php
         require('dbconnect.php');
-        $statement = $db->prepare('INSERT INTO bbs SET username=?, body=?, created_at=NOW()+INTERVAL 9 HOUR');
-        $statement->execute(array($_POST['username'], $_POST['body']));
-        echo '投稿しました';
+        if($_POST['username']==''){
+            $error['username']='blank';
+            echo "投稿者名が未入力です。";
+        }
+        if($_POST['body']==''){
+            $error['body']='blank';
+            echo "本文が未入力です。";
+        }
+        if (!empty($error)){
+            $statement = $db->prepare('INSERT INTO bbs SET username=?, body=?, created_at=NOW()+INTERVAL 9 HOUR');
+            $statement->execute(array($_POST['username'], $_POST['body']));
+            echo '投稿しました';
+        }
         ?>
         <br>
         <a href="index.php">戻る</a>

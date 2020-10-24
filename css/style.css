@@ -49,5 +49,5 @@ header h1 {
     margin-top: 0;
   }
   .show_body{
-    max-width: 80%;
+    width: 600px;
   }

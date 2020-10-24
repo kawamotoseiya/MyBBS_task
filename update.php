@@ -17,8 +17,19 @@
     <div class="main_body">
         <?php
             require('dbconnect.php');
+
+            if($_POST['username']==''){
+                $error['username']='blank';
+                echo "投稿者名が未入力です。";
+            }
+            if($_POST['body']==''){
+                $error['body']='blank';
+                echo "本文が未入力です。";
+            }
+            if (empty($error)){
             $statement = $db->prepare('UPDATE bbs SET username=?, body=?, created_at=NOW()+INTERVAL 9 HOUR, WHERE id=?');
             $statement->execute(array($_POST['username'], $_POST['body'], $_POST['id']));
+            }
         ?>
         <p class="update_comment">変更しました。</p>
         <a href="index.php">戻る</a>

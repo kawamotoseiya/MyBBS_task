@@ -49,4 +49,6 @@ header h1 {
   .destroy_comment{
     margin-top: 0;
   }
-
+  .show_body{
+    margin:0 auto;
+  }

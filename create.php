@@ -18,7 +18,7 @@
         <?php
         require('dbconnect.php');
         date_default_timezone_set('Asia/Tokyo');
-        $statement = $db->prepare('INSERT INTO bbs SET username=?, body=?, created_at=NOW()');
+        $statement = $db->prepare('INSERT INTO bbs SET username=?, body=?, created_at=NOW()+INTERVAL 9 HOUR');
         $statement->execute(array($_POST['username'], $_POST['body']));
         echo '投稿しました';
         ?>

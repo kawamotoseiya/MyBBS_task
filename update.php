@@ -17,7 +17,7 @@
     <div class="main_body">
         <?php
             require('dbconnect.php');
-            $statement = $db->prepare('UPDATE bbs SET username=?, body=?, created_at=NOW() WHERE id=?');
+            $statement = $db->prepare('UPDATE bbs SET username=?, body=?, created_at=NOW()+INTERVAL 9 HOUR, WHERE id=?');
             $statement->execute(array($_POST['username'], $_POST['body'], $_POST['id']));
         ?>
         <p class="update_comment">変更しました。</p>

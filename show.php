@@ -43,7 +43,7 @@
             <?php while ($comment = $comments->fetch()): ?>
             <tr>
                 <td><?php print($comment['comment']); ?></td>
-                <td><time><?php print($comment['created_at']); ?>+09:00:00</time></td>
+                <td><time><?php print($comment['created_at']); ?></time></td>
                 <td><a href="comment_des.php?id=<?php print($comment['id']);?>">削除</a></td>
             </tr>          
             <?php endwhile; ?>
